@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import AboutMe from "./components/AboutMe";
+import ContactForm from "./components/ContactForm";
+import NavBar from "./components/NavBar";
+import ParticleBackground from "./components/ParticleBackground";
+import Proyects from "./components/Proyects";
+import ToolBox from "./components/ToolBox";
+import StartingPage from "./components/StartingPage";
+
+const Container = styled.div`
+position: relative;
+background-color: #2a2b39;
+`
+
+const SubContainer1 = styled.div`
+position: relative;
+z-index: 0;
+`
+
+const Subcontainer2 = styled.div`
+position: relative;
+z-index: 100;
+`
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <SubContainer1>
+        <ParticleBackground />
+
+        </SubContainer1>
+        <Subcontainer2>
+         
+      <NavBar />
+      <StartingPage />
+      <AboutMe />
+      <Proyects />
+      <ToolBox />
+      <ContactForm /> 
+      </Subcontainer2>
+    </Container>
+    
   );
 }
 
