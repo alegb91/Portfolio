@@ -93,6 +93,8 @@ color: black;
 `
 
 const Send = styled.div`
+border: 1px solid black;
+border-radius: 5px;
 display: inline;
 height: 25px;
 padding: 5px;
@@ -103,6 +105,8 @@ margin: 10px;
 `
 
 const Error = styled.div`
+border: 1px solid black;
+border-radius: 5px;
 display: inline;
 height: 25px;
 padding: 5px;
@@ -164,7 +168,7 @@ const ContactForm = () => {
                     <Input type="email" name="email"/> 
                 </InputContainer>
                 <InputContainer>
-                    <Label>Algo</Label>
+                    <Label >Message</Label>
                     <TextArea type="text" name="message"/> 
                 </InputContainer>
                 <Button type="submit">Send</Button>
