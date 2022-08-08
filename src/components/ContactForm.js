@@ -78,6 +78,8 @@ border: 1px solid black;
 height: 30px;
 width: 100%;
 padding-left: 5px;
+background-color: #fbfef9;
+color: black;
 `
 const TextArea = styled.textarea`
 border-radius: 5px;
@@ -86,6 +88,8 @@ height: 200px;
 width: 100%;
 padding-left: 5px;
 resize: none;
+background-color: #fbfef9;
+color: black;
 `
 
 const Send = styled.div`

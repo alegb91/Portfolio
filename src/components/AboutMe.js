@@ -94,7 +94,7 @@ const AboutMe = () => {
             <Description>Im from <Strong>Argentina</Strong> <AR className="flag"/>, but i want to relocate eventually. I've a degree in <Strong>business administration and accounting</Strong> and i've been working in the field for the <Strong>last 5 years.</Strong></Description>
             <Description>I started learning Front-End Development last year, and i enjoyed it a lot! So im looking to switch my career path.</Description>
             <Description>I am a <Strong>quick learner, problem solver, i'm curious and i've some leadership experience from previous jobs.</Strong></Description>
-            <Description>In my free time i enjoy sports such as <Strong>football and mountain climbing.</Strong> I also love videogames and recently started playing Chess.</Description>
+            <Description>In my free time i enjoy sports such as <Strong>football and mountain climbing </Strong>and i also play videogames from time to time.</Description>
 </DescriptionContainer>
         </div>
         </div>

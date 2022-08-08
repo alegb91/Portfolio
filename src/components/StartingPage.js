@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import CV from "../config/alejandroGonzalezBuffoIngles.pdf"
+import CV from "../config/AlejandroGonzalezBuffoEnglish.pdf"
 
 
 const Container = styled.div`
@@ -13,7 +13,7 @@ justify-content: center;
 align-items: center;
 
 @media (max-width: 400px) {
-  margin: 0px 5px;
+  margin: 0px;
   height: 70vh;
 }
 `
@@ -35,7 +35,7 @@ font-size: 40px;
 font-weight: bold;
 
 @media (max-width: 500px) {
-  margin: 0px 30px; 
+  padding-left: 30px; 
  }
 `
 
@@ -52,7 +52,7 @@ align-items: start;
 margin-top: 10px;
 
 @media (max-width: 500px) {
-  margin: 0px 30px; 
+  padding-left: 30px; 
  }
 `
 
