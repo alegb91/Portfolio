@@ -8,6 +8,10 @@ function ParticleBackground() {
 
     const Container = styled.div`
     z-index: -1;
+
+    @media (max-width: 500px) {
+      display: none;
+    }
     `
 
   const particlesInit = async (main) => {
