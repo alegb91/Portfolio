@@ -91,9 +91,10 @@ const AboutMe = () => {
           <div className="col">
         <Title data-aos="fade-up" data-aos-anchor-placement="top-center">ABOUT ME</Title>
         <DescriptionContainer>
-            <Description>Im from <Strong>Argentina</Strong> <AR className="flag"/>, but i want to relocate eventually. I've a degree in <Strong>business administration and accounting</Strong> and i've been working in the field for the <Strong>last 5 years.</Strong></Description>
-            <Description>I started learning Front-End Development last year, and i enjoyed it a lot! So im looking to switch my career path.</Description>
-            <Description>I am a <Strong>quick learner, problem solver, i'm curious and i've some leadership experience from previous jobs.</Strong></Description>
+            <Description>Im from <Strong>Argentina</Strong> <AR className="flag"/>, but i want to relocate eventually.</Description>
+            <Description>I've a degree in <Strong>business administration and accounting</Strong> and i've been <Strong>working in the field since 2017.</Strong></Description>
+            <Description>I started learning Front-End Development at the end of 2021, and i enjoyed it a lot! So im looking to switch my career path.</Description>
+            <Description>I am a <Strong>quick learner, problem solver, i'm curious and i've leadership experience from previous jobs.</Strong></Description>
             <Description>In my free time i enjoy sports such as <Strong>football and mountain climbing </Strong>and i also play videogames from time to time.</Description>
 </DescriptionContainer>
         </div>
