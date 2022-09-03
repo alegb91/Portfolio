@@ -86,7 +86,7 @@ const StartingPage = () => {
         <div className="d-flex col m-1 p-0">
         <SubContainer>
         <Introduction>Hi! I'm <Name>Ale</Name>.</Introduction>
-        <Introduction>I'm a Front-End developer.</Introduction>
+        <Introduction>I'm a Full Stack Developer.</Introduction>
         <Links className="container">
           <div className="row">
         <div className="col-10 col-md-6 d-flex p-0">
