@@ -337,33 +337,7 @@ const Proyects = () => {
             </Link>
       </div>
   
-        </div> 
-
-
-      {/* Coming Next */}
-
-
-      <Title>Working on</Title>
-
-
-      <div className="row my-5 d-flex justify-content-center align-items-center">
-        
-      <div data-aos="fade-right" className="col-10 col-md-8 col-lg-5 px-5 text-center mb-2">
-      <ProyectTitle>Gatsby - GraphQL</ProyectTitle>
-      <ProyectDesc>I've been learning about Gatsby, so im looking to create a good proyect to show my knowledge.</ProyectDesc>
-    
-      </div>
-
-      <div data-aos="fade-left" className="col-10 col-md-8 col-lg-5">
-      <Link>  
-      <NextProyectsImg src={GastbyImg}/>
-      <LinkHover>
-      <InProgress>In Progress</InProgress>
-      </LinkHover>
-      </Link>
-      </div>
-
-      </div>    
+        </div>    
 
     </Container>
   )
