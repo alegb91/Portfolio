@@ -5,13 +5,25 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import emailjs from "emailjs-com"
 
-const Container = styled.div`
-margin-top: 0px;    
+const Container = styled.div` 
+position: relative;  
+display: flex;
+height: 85vh;
+padding: 0 100px 0 100px;
+margin: 0;
+`
+
+const SubContainer = styled.div `
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative;
 `
 
 const Title = styled.h1`
 color: #fbfef9;
-margin-bottom: 20px;
+margin: 0;
+margin-bottom: 70px;
 font-size: 50px;
 text-align: center;
 `
@@ -20,6 +32,8 @@ const InfoContainer = styled.div`
 display: flex;
 color: #fbfef9;
 margin: 20px;
+justify-content: center;
+align-items: center;
 `
 
 const Icon = styled.div`
@@ -154,10 +168,40 @@ const ContactForm = () => {
       window.addEventListener('load', AOS.refresh)
 
   return (
-    <Container className="container" id="contactMe">
-        <div className="row d-flex justify-content-center align-items-center">
-        <Title className="col-10 col-md-12">Contact Me</Title>
-        <div className="col-10 col-lg-5 d-flex flex-column mb-5">
+    <Container className="container pt-3" id="contactMe">
+        <SubContainer className='row m-0 align-content-start justify-content-between w-100 pt-4 px-5'>
+        <SubContainer className='col m-0'>
+        <Title>Contact Me</Title>
+            <InfoContainer data-aos="fade-left">
+                    <Icon>
+                        <Phone />
+                    </Icon>
+                    <Span>+543815622754</Span>
+                </InfoContainer>
+                <InfoContainer data-aos-anchor-placement="top-bottom" data-aos="fade-left">
+                    <Icon>
+                        <Mail />
+                    </Icon>
+                    <Span>alegb91@gmail.com</Span>
+                </InfoContainer>
+                <InfoContainer data-aos-anchor-placement="top-bottom" data-aos="fade-left">
+                    <Icon>
+                        <LocationOn />
+                    </Icon>
+                    <Span>Tucuman, Argentina</Span>
+                </InfoContainer>
+                <InfoContainer data-aos-anchor-placement="top-bottom" data-aos="fade-left">
+                    <ContactIcon target="_blank" href="https://github.com/alegb91">
+                        <GitHub />
+                    </ContactIcon>
+                    <ContactIcon target="_blank" href="https://www.linkedin.com/in/alejandrogonzalezbuffo/">
+                        <LinkedIn />
+                    </ContactIcon>
+                </InfoContainer>
+                
+                
+            </SubContainer>    
+        <SubContainer className='col m-0'> 
             <form onSubmit={sendEmail}>
             <InputContainer>
                     <Label >Name</Label>
@@ -175,38 +219,8 @@ const ContactForm = () => {
                 {formStatus === "Enviado" ? <Send data-aos="fade">Message send</Send> : null}
                 {formStatus === "Error" ? <Error data-aos="fade">Error</Error> : null}
                </form>
-            </div>
-            <div className="col-10 col-lg-4 d-flex flex-column justify-content-center align-items-start">
-            <InfoContainer data-aos="fade-right">
-                    <Icon>
-                        <Phone />
-                    </Icon>
-                    <Span>+543815622754</Span>
-                </InfoContainer>
-                <InfoContainer data-aos-anchor-placement="top-bottom" data-aos="fade-right">
-                    <Icon>
-                        <Mail />
-                    </Icon>
-                    <Span>alegb91@gmail.com</Span>
-                </InfoContainer>
-                <InfoContainer data-aos-anchor-placement="top-bottom" data-aos="fade-right">
-                    <Icon>
-                        <LocationOn />
-                    </Icon>
-                    <Span>Tucuman, Argentina</Span>
-                </InfoContainer>
-                <InfoContainer data-aos-anchor-placement="top-bottom" data-aos="fade-right">
-                    <ContactIcon target="_blank" href="https://github.com/alegb91">
-                        <GitHub />
-                    </ContactIcon>
-                    <ContactIcon target="_blank" href="https://www.linkedin.com/in/alejandrogonzalezbuffo/">
-                        <LinkedIn />
-                    </ContactIcon>
-                </InfoContainer>
-                
-                
-            </div>
-        </div>
+            </SubContainer>
+        </SubContainer>
     </Container>
   )
 }

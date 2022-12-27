@@ -1,16 +1,17 @@
-import { GitHub, LinkedIn } from '@mui/icons-material'
-import React, { useState } from 'react'
-import styled from 'styled-components'
+import { GitHub, LinkedIn } from '@mui/icons-material';
+import React from 'react';
+import styled from 'styled-components';
+import CV from "../config/AlejandroGonzalezBuffoEnglish.pdf";
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
 position: relative;
-height: 10vh;
+height: 15vh;
 width: 100%;
 display: flex;
-align-items: end;
-flex-direction: column;
-padding-top: 20px;
-padding-bottom: 40px;
+align-items: center;
+justify-content: space-between;
+padding-top: 50px;
 
 @media (max-width: 500px) {
 }
@@ -35,6 +36,63 @@ color: #fbfef9;
 }
 `
 
+const Links = styled.div`
+display: flex;
+justify-content: start;
+align-items: start;
+margin-top: 10px;
+
+@media (max-width: 500px) {
+  padding-left: 30px; 
+ }
+`
+
+const Button = styled.div`
+color: #fbfef9;
+background-color: transparent;
+padding: 5px;
+border: solid 1.5px rgb(4, 93, 152);
+border-radius: 5px;
+text-decoration: none;
+margin: 5px;
+cursor: pointer;
+transition: all 0.3s ease;
+flex: 1;
+text-align: center;
+
+@media (max-width: 500px) {
+ margin: 5px; 
+}
+
+&:hover {
+  color: #fbfef9;
+  background-color: rgb(4, 93, 152);
+}
+`
+
+const ButtonCV = styled.a`
+color: #fbfef9;
+background-color: transparent;
+padding: 5px;
+border: solid 1.5px rgb(4, 93, 152);
+border-radius: 5px;
+text-decoration: none;
+margin: 5px;
+cursor: pointer;
+transition: all 0.3s ease;
+flex: 1;
+text-align: center;
+
+@media (max-width: 500px) {
+ margin: 5px; 
+}
+
+&:hover {
+  color: #fbfef9;
+  background-color: rgb(4, 93, 152);
+}
+`
+
 
 const NavBar = () => {
 
@@ -54,6 +112,20 @@ const NavBar = () => {
 
   return (
     <Container className="container">
+      <div className="row">
+      <Links className="container">
+          <div className="row">
+        <div className="col-10 col-md-6 d-flex p-0">
+        <Link style={{textDecoration: 'none'}} to='/aboutMe'><Button>About</Button></Link>
+        <Link style={{textDecoration: 'none'}} to='/proyects'><Button>Proyects</Button></Link>
+        </div>
+        <div className="col-10 col-md-6 d-flex p-0">
+        <Link style={{textDecoration: 'none'}} to='/contactForm'><Button>Contact</Button></Link>
+        <ButtonCV href={CV} target="_blank">Resume</ButtonCV>
+        </div>
+        </div>
+        </Links>
+      </div>
       <div className="row">
       <div className="col">
       <InfoContainer>
