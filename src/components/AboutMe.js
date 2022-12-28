@@ -3,20 +3,19 @@ import React, { useEffect } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {
-   faBootstrap, 
   faCss3, 
   faGitAlt, 
   faGithub, 
   faHtml5, 
   faJs, 
   faNodeJs, 
-  faReact, 
-  faSass } from '@fortawesome/free-brands-svg-icons';
+  faReact } from '@fortawesome/free-brands-svg-icons';
   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-  import mongodb from "../images/Toolbox-icons/mongodb.png"
+  import mongodb from "../images/Toolbox-icons/mongodb.png";
+import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 
 const Container = styled.div`
-    height: 85vh;
+    min-height: 85vh;
     display:flex; 
     flex-direction: column; 
     justify-content: center;
@@ -37,14 +36,14 @@ const Title = styled.h1`
 color: white;
 font-size: 80px;
 font-weight: bold;
-z-index: 1;
 
-@media (max-width: 1050px) {
-
+@media (max-width: 800px) {
+  font-size: 70px;
+  padding-left: 5px;
 }
 
 @media (max-width: 500px) {
-  display: none;
+  font-size: 60px;
 }
 `
 
@@ -57,9 +56,8 @@ align-items: start;
 flex-direction: column;
 z-index: 2;
 
-
-@media (max-width: 500px) {
-
+@media (max-width: 1000px) {
+  margin-top: 70px;
 }
 `
 const Description = styled.span`
@@ -68,7 +66,11 @@ font-size: 21px;
 font-family: 'BenchNine', sans-serif;
 word-spacing: 3px;
 
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
+  font-size: 18px;
+}
+
+@media (max-width: 700px) {
   margin: 0;
 }
 `
@@ -79,6 +81,10 @@ font-size: 21px;
 color: rgb(0, 160, 255, 0.7);
 font-family: 'BenchNine', sans-serif;
 word-spacing: 3px;
+
+@media (max-width: 800px) {
+  font-size: 18px;
+}
 
 @media (max-width: 500px) {
   margin: 0;
@@ -127,7 +133,7 @@ const AboutMe = () => {
               <Description>I started learning Development at the end of 2021, and i enjoyed it a lot! So im looking to switch my career path.</Description>
               <Description>I am a <Strong>quick learner, problem solver, i'm curious and i've leadership experience from previous jobs.</Strong></Description>
           </DescriptionContainer>
-            <div className="pt-5 d-flex justify-content-around">
+            <div className="pt-5 d-flex justify-content-around flex-wrap">
             <Icon>
             <FontAwesomeIcon className="ToolBox-Icons" icon={faHtml5}/>
                 <Name>HTML</Name>
@@ -145,17 +151,17 @@ const AboutMe = () => {
                 <Name>REACT</Name>
             </Icon>  
             <Icon>
-            <FontAwesomeIcon className="ToolBox-Icons" icon={faBootstrap}/>
-                <Name>BOOTSTRAP</Name>
-            </Icon>  
-            <Icon>
-            <FontAwesomeIcon className="ToolBox-Icons" icon={faSass}/>
-                <Name>SASS</Name>
-            </Icon>
-            <Icon>
             <FontAwesomeIcon className="ToolBox-Icons" icon={faNodeJs}/>
                 <Name>NODEJS</Name>
             </Icon>
+            <Icon>
+                <Img src={mongodb}/>
+                <Name>MONGODB</Name>
+            </Icon>   
+            <Icon>
+            <FontAwesomeIcon className="ToolBox-Icons" icon={faDatabase}/>
+                <Name>SQL</Name>
+            </Icon> 
             <Icon>
             <FontAwesomeIcon className="ToolBox-Icons" icon={faGitAlt}/>
                 <Name>GIT</Name>
@@ -164,10 +170,6 @@ const AboutMe = () => {
             <FontAwesomeIcon className="ToolBox-Icons" icon={faGithub}/>
                 <Name>GITHUB</Name>
             </Icon>   
-            <Icon>
-                <Img src={mongodb}/>
-                <Name>MONGODB</Name>
-            </Icon> 
             </div>  
       </Container>
   )

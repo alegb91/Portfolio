@@ -8,32 +8,69 @@ import emailjs from "emailjs-com"
 const Container = styled.div` 
 position: relative;  
 display: flex;
-height: 85vh;
-padding: 0 100px 0 100px;
-margin: 0;
+justify-content: center;
+align-items: center;    
+min-height: 85vh;
+padding: 0 50px;
+margin: 0 140px;
+
+@media(max-width: 1200px ) {
+    margin: 0 100px;
+}
+
+@media(max-width: 1000px ) {
+    margin: 0 30px;
+    padding: 0 30px;
+}
+
+@media(max-width: 800px ) {
+    margin: 0 10px;
+    padding: 0 10px;
+}
+
+@media(max-width: 700px ) {
+    flex-direction: column;
+    margin:0 50px 0 50px;
+    padding: 50px 0;
+}
+
+@media(max-width: 500px ) {
+    margin:0 10px 0 10px;
+    padding: 50px 0;
+}
 `
 
 const SubContainer = styled.div `
     margin: 0;
-    padding: 0;
     height: 100%;
+    width: 100%;
     position: relative;
 `
 
 const Title = styled.h1`
 color: #fbfef9;
 margin: 0;
-margin-bottom: 70px;
+margin-bottom: 40px;
 font-size: 50px;
 text-align: center;
+
+@media(max-width: 700px) {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 `
 
 const InfoContainer = styled.div`
-display: flex;
-color: #fbfef9;
-margin: 20px;
-justify-content: center;
-align-items: center;
+    display: flex;
+    color: #fbfef9;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+
+    @media(max-width: 500px) {
+        justify-content: start;
+        padding-left: 20px; 
+    }
 `
 
 const Icon = styled.div`
@@ -77,8 +114,8 @@ margin: 7px;
 `
 
 const InputContainer = styled.div`
-padding: 10px 25px;
-`;
+    padding: 10px 25px;
+`
 
 const Label = styled.div`
 color: #fbfef9;
@@ -168,9 +205,8 @@ const ContactForm = () => {
       window.addEventListener('load', AOS.refresh)
 
   return (
-    <Container className="container pt-3" id="contactMe">
-        <SubContainer className='row m-0 align-content-start justify-content-between w-100 pt-4 px-5'>
-        <SubContainer className='col m-0'>
+    <Container id="contactMe">
+        <SubContainer>
         <Title>Contact Me</Title>
             <InfoContainer data-aos="fade-left">
                     <Icon>
@@ -201,7 +237,7 @@ const ContactForm = () => {
                 
                 
             </SubContainer>    
-        <SubContainer className='col m-0'> 
+        <SubContainer> 
             <form onSubmit={sendEmail}>
             <InputContainer>
                     <Label >Name</Label>
@@ -220,7 +256,6 @@ const ContactForm = () => {
                 {formStatus === "Error" ? <Error data-aos="fade">Error</Error> : null}
                </form>
             </SubContainer>
-        </SubContainer>
     </Container>
   )
 }

@@ -12,15 +12,16 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 padding-top: 50px;
-
-@media (max-width: 500px) {
-}
 `
 
 const InfoContainer = styled.div`
 display: flex;
 color: #fbfef9;
 padding: 10px 30px;
+
+@media (max-width: 500px) {
+    padding: 10px 5px;
+}
 `
 
 const ContactIcon = styled.a`
@@ -42,7 +43,7 @@ justify-content: start;
 align-items: start;
 margin-top: 10px;
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   padding-left: 30px; 
  }
 `
@@ -80,8 +81,8 @@ text-decoration: none;
 margin: 5px;
 cursor: pointer;
 transition: all 0.3s ease;
-flex: 1;
 text-align: center;
+width: fit-content;
 
 @media (max-width: 500px) {
  margin: 5px; 
@@ -115,11 +116,11 @@ const NavBar = () => {
       <div className="row">
       <Links className="container">
           <div className="row">
-        <div className="col-10 col-md-6 d-flex p-0">
+        <div className="col-12 col-sm-6 d-flex p-0">
         <Link style={{textDecoration: 'none'}} to='/aboutMe'><Button>About</Button></Link>
         <Link style={{textDecoration: 'none'}} to='/proyects'><Button>Proyects</Button></Link>
         </div>
-        <div className="col-10 col-md-6 d-flex p-0">
+        <div className="col-12 col-sm-6 d-flex p-0">
         <Link style={{textDecoration: 'none'}} to='/contactForm'><Button>Contact</Button></Link>
         <ButtonCV href={CV} target="_blank">Resume</ButtonCV>
         </div>
@@ -127,7 +128,7 @@ const NavBar = () => {
         </Links>
       </div>
       <div className="row">
-      <div className="col">
+      <div className="col p-0">
       <InfoContainer>
           <ContactIcon target="_blank" href="https://github.com/alegb91">
               <GitHub />

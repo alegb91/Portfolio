@@ -7,9 +7,10 @@ import { motion } from "framer-motion";
 
 
 const Container = styled.div`
+position: relative;
 display: flex;
 flex-direction: column;
-height: 100vh;
+min-height: 100vh;
 width: 100%;
 display: flex;
 justify-content: center;
@@ -17,18 +18,27 @@ align-items: center;
 
 @media (max-width: 400px) {
   margin: 0px;
-  height: 70vh;
 }
 `
 
 const SubContainer = styled.div`
 display: flex; 
 flex-direction: column;
-padding-right: 250px;
-padding-bottom: 100px;
+position: absolute;
+top: 30vh;
+left: 30vh;
+
+@media (max-width: 900px) {
+left: 20vh;
+}
+
+@media (max-width: 700px) {
+  left: 5vh;
+}
 
 @media (max-width: 500px) {
-  padding: 0;
+  padding: 20px;
+  left: 1vh;
 }
 `
 
@@ -37,8 +47,8 @@ color: #fbfef9;
 font-size: 40px;
 font-weight: bold;
 
-@media (max-width: 500px) {
-  padding-left: 30px; 
+@media (max-width: 350px) {
+  font-size: 35px;
  }
 `
 
@@ -46,6 +56,10 @@ const Name = styled.span`
 color: rgb(4, 93, 152);
 font-size: 50px;
 font-weight: bold;
+
+@media (max-width: 350px) {
+  font-size: 35px;
+ }
 `
 
 const Links = styled.div`
@@ -54,8 +68,8 @@ justify-content: start;
 align-items: start;
 margin-top: 10px;
 
-@media (max-width: 500px) {
-  padding-left: 30px; 
+@media (max-width: 350px) {
+  flex-direction: column; 
  }
 `
 
@@ -94,8 +108,8 @@ text-decoration: none;
 margin: 5px;
 cursor: pointer;
 transition: all 0.3s ease;
-flex: 1;
 text-align: center;
+width: fit-content;
 
 @media (max-width: 500px) {
  margin: 5px; 
@@ -114,6 +128,18 @@ right: 70px;
 display: flex;
 color: #fbfef9;
 padding: 10px 30px;
+
+@media (max-width: 800px) {
+  right: 40px;
+ }
+
+ @media (max-width: 500px) {
+  right: 10px;
+ }
+
+ @media (max-width: 350px) {
+  right: 0;
+ }
 `
 
 const ContactIcon = styled.a`
@@ -131,7 +157,6 @@ color: #fbfef9;
 const StartingPage = () => {
   return (
     <motion.div 
-      className="container"
       initial={{ width: 0 }}
       animate={{ width: '100%' }}
       exit={{ x: window.innerWidth, transition: {duration: 0.1} }}
@@ -145,26 +170,20 @@ const StartingPage = () => {
               <LinkedIn />
           </ContactIcon>
       </InfoContainer>
-      <div className="row">
-        <div className="d-flex col m-1 p-0">
         <SubContainer>
         <Introduction>Hi! I'm <Name>Ale</Name>.</Introduction>
         <Introduction>I'm a Front-End Developer.</Introduction>
-        <Links className="container">
-          <div className="row">
-        <div className="col-10 col-md-6 d-flex p-0">
-        <Link style={{textDecoration: 'none'}} to='/aboutMe'><Button>About</Button></Link>
-        <Link style={{textDecoration: 'none'}} to='/proyects'><Button>Proyects</Button></Link>
-        </div>
-        <div className="col-10 col-md-6 d-flex p-0">
-        <Link style={{textDecoration: 'none'}} to='/contactForm'><Button>Contact</Button></Link>
-        <ButtonCV href={CV} target="_blank">Resume</ButtonCV>
-        </div>
-        </div>
+        <Links>
+            <div className="d-flex p-0">
+                <Link style={{textDecoration: 'none'}} to='/aboutMe'><Button>About</Button></Link>
+                <Link style={{textDecoration: 'none'}} to='/proyects'><Button>Proyects</Button></Link>
+            </div>
+            <div className="d-flex p-0">
+                <Link style={{textDecoration: 'none'}} to='/contactForm'><Button>Contact</Button></Link>
+                <ButtonCV href={CV} target="_blank">Resume</ButtonCV>
+            </div>
         </Links>
         </SubContainer>
-        </div>
-        </div>
         </Container>
     </motion.div>
   )

@@ -13,7 +13,17 @@ import "aos/dist/aos.css";
 
 
 const Container = styled.div`
-margin: 0;
+position: relative;
+margin: auto;
+padding: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
+
+const Subcontainer = styled.div`
+ max-width: 100%;
 `
 
 
@@ -23,6 +33,10 @@ margin-bottom: 70px;
 padding-top: 30px;
 font-size: 50px;
 color: #fbfef9;
+
+@media(max-width: 800px) {
+  margin-bottom: 20px;
+}
 `
 
 
@@ -171,12 +185,12 @@ const Proyects = () => {
           <Container className="container mt-5" id="proyects">
           
          
-              <div className="col-12 mb-5">
+              <div className="col-12">
                 <Title>My Proyects</Title>
               </div> 
 
 
-    <div className="row py-5 d-flex justify-content-center align-items-center">
+    <Subcontainer className="row py-5 d-flex justify-content-center align-items-center">
         
       <div data-aos="fade-right" className="col-10 col-md-8 col-lg-5 px-5 text-center d-flex flex-column mb-2">
         <ProyectTitle>TaskManager with custom API</ProyectTitle>
@@ -203,11 +217,11 @@ const Proyects = () => {
       </Link>
       </div>
 
-      </div>        
+      </Subcontainer>        
     
 
 
-    <div className="row py-5 d-flex justify-content-center align-items-center">
+    <Subcontainer className="row py-5 d-flex justify-content-center align-items-center">
         
       <div data-aos="fade-right" className="col-10 col-md-8 col-lg-5 px-5 text-center d-flex flex-column mb-2">
         <ProyectTitle>Countries Info and Climate App</ProyectTitle>
@@ -233,9 +247,9 @@ const Proyects = () => {
       </Link>
       </div>
 
-      </div>
+      </Subcontainer>
 
-      <div className="row py-5 d-flex justify-content-center align-items-center">
+      <Subcontainer className="row py-5 d-flex justify-content-center align-items-center">
         
         <div data-aos="fade-right" className="col-10 col-md-8 col-lg-5 px-5 text-center mb-2">
         <ProyectTitle>Gym Landing Page</ProyectTitle>
@@ -263,12 +277,12 @@ const Proyects = () => {
         </Link>
         </div>
   
-        </div> 
+        </Subcontainer> 
 
 
       
 
-      <div className="row py-5 d-flex justify-content-center align-items-center">
+      <Subcontainer className="row py-5 d-flex justify-content-center align-items-center">
         
         <div data-aos="fade-right" className="col-10 col-md-8 col-lg-5 px-5 text-center mb-2">
             <ProyectTitle>Tesla Clone</ProyectTitle>
@@ -291,9 +305,9 @@ const Proyects = () => {
             </Link>
       </div>
   
-        </div>    
+        </Subcontainer>    
 
-        <div className="row py-5 d-flex justify-content-center align-items-center">
+        <Subcontainer className="row py-5 d-flex justify-content-center align-items-center">
 
         <div data-aos="fade-right" className="col-10 col-md-8 col-lg-5 px-5 text-center mb-2">
         <ProyectTitle>Drum Machine</ProyectTitle>
@@ -319,7 +333,7 @@ const Proyects = () => {
       </Link>
       </div>
 
-      </div>
+      </Subcontainer>
 
     </Container>
   )
