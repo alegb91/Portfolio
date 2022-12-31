@@ -1,15 +1,12 @@
 import { GitHub, Web } from '@mui/icons-material';
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import drumMachineImg from "../images/Proyects/DrumMachine.png";
 import axeGymImg from "../images/Proyects/AxeGym.png";
 import CountriesImg from "../images/Proyects/Countries.png";
 import taskManagerImg from "../images/Proyects/TaskManager.png";
-import TeslaImg from "../images/Proyects/Tesla.png"
-
-
-import AOS from "aos";
-import "aos/dist/aos.css";
+import TeslaImg from "../images/Proyects/Tesla.png";
+import 'animate.css';
 
 
 const Container = styled.div`
@@ -24,6 +21,22 @@ align-items: center;
 
 const Subcontainer = styled.div`
  max-width: 100%;
+`
+
+const DescContainer = styled.div`
+    opacity: 0;
+    animation: fadeInRight; 
+    animation-duration: 0.6s; 
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+`
+
+const ImgContainer = styled.div`
+    opacity: 0;
+    animation: fadeInLeft; 
+    animation-duration: 0.6s; 
+    animation-fill-mode: forwards;
+
 `
 
 
@@ -166,19 +179,8 @@ const APIButton = styled.a`
   }
 `
 
+
 const Proyects = () => {
-
-  useEffect(() => {
-    AOS.init({
-      offset: 100,
-      duration: 1000,
-      easing: 'ease-out-sine',
-      delay: 100,
-      anchorPlacement: "top-bottom",
-    })
-    window.addEventListener('load', AOS.refresh)
-
-  })
 
 
   return (
@@ -192,7 +194,7 @@ const Proyects = () => {
 
     <Subcontainer className="row py-5 d-flex justify-content-center align-items-center">
         
-      <div data-aos="fade-right" className="col-10 col-md-8 col-lg-5 px-5 text-center d-flex flex-column mb-2">
+      <DescContainer className="col-10 col-md-8 col-lg-5 px-5 text-center d-flex flex-column mb-2">
         <ProyectTitle>TaskManager with custom API</ProyectTitle>
         <ProyectDesc> 
           
@@ -201,9 +203,9 @@ const Proyects = () => {
         <Pils>JavaScript <Strong>/</Strong> React <Strong>/</Strong> NodeJS <Strong>/</Strong> Express <Strong>/</Strong> MongoDB <Strong>/</Strong> Styled Components <Strong>/</Strong> Axios <Strong>/</Strong> React Router</Pils>
         </div>
         <APIButton target="_blank" href="https://github.com/alegb91/TaskAPI">API Code</APIButton>
-     </div>
+     </DescContainer>
 
-      <div data-aos="fade-left" className="col-10 col-md-8 col-lg-5">
+      <ImgContainer className="col-10 col-md-8 col-lg-5">
       <Link>  
         <Img src={taskManagerImg}/> 
       <LinkHover>
@@ -215,7 +217,7 @@ const Proyects = () => {
         </Icons>
       </LinkHover>
       </Link>
-      </div>
+      </ImgContainer>
 
       </Subcontainer>        
     
@@ -223,7 +225,7 @@ const Proyects = () => {
 
     <Subcontainer className="row py-5 d-flex justify-content-center align-items-center">
         
-      <div data-aos="fade-right" className="col-10 col-md-8 col-lg-5 px-5 text-center d-flex flex-column mb-2">
+      <DescContainer className="col-10 col-md-8 col-lg-5 px-5 text-center d-flex flex-column mb-2">
         <ProyectTitle>Countries Info and Climate App</ProyectTitle>
         <ProyectDesc> 
           
@@ -231,9 +233,9 @@ const Proyects = () => {
         <div className="my-2 d-flex justify-content-center align-items-center">
         <Pils>JavaScript <Strong>/</Strong> React <Strong>/</Strong> React ContextAPI <Strong>/</Strong> StyledComponents <Strong>/</Strong> Material UI <Strong>/</Strong> Axios <Strong>/</Strong> React Router</Pils>
         </div>
-     </div>
+     </DescContainer>
 
-      <div data-aos="fade-left" className="col-10 col-md-8 col-lg-5">
+      <ImgContainer className="col-10 col-md-8 col-lg-5">
       <Link>  
         <Img src={CountriesImg}/> 
       <LinkHover>
@@ -245,13 +247,13 @@ const Proyects = () => {
         </Icons>
       </LinkHover>
       </Link>
-      </div>
+      </ImgContainer>
 
       </Subcontainer>
 
       <Subcontainer className="row py-5 d-flex justify-content-center align-items-center">
         
-        <div data-aos="fade-right" className="col-10 col-md-8 col-lg-5 px-5 text-center mb-2">
+        <DescContainer className="col-10 col-md-8 col-lg-5 px-5 text-center mb-2">
         <ProyectTitle>Gym Landing Page</ProyectTitle>
   
         <Description>
@@ -261,9 +263,9 @@ const Proyects = () => {
         <div className="my-2 d-flex justify-content-center align-items-center">
           <Pils>JavaScript <Strong>/</Strong> React <Strong>/</Strong> Styled-Components <Strong>/</Strong> Material UI <Strong>/</Strong> Animate.css <Strong>/</Strong> React-Router</Pils>
           </div>
-        </div>
+        </DescContainer>
   
-        <div data-aos="fade-left" className="col-10 col-md-8 col-lg-5">
+        <ImgContainer className="col-10 col-md-8 col-lg-5">
         <Link>  
         <Img src={axeGymImg}/>
         <LinkHover>
@@ -275,7 +277,7 @@ const Proyects = () => {
           </Icons>
         </LinkHover>
         </Link>
-        </div>
+        </ImgContainer>
   
         </Subcontainer> 
 
@@ -284,14 +286,14 @@ const Proyects = () => {
 
       <Subcontainer className="row py-5 d-flex justify-content-center align-items-center">
         
-        <div data-aos="fade-right" className="col-10 col-md-8 col-lg-5 px-5 text-center mb-2">
+        <DescContainer className="col-10 col-md-8 col-lg-5 px-5 text-center mb-2">
             <ProyectTitle>Tesla Clone</ProyectTitle>
             <div className="my-2 d-flex justify-content-center align-items-center">
               <Pils>JavaScript <Strong>/</Strong> React <Strong>/</Strong> Material UI <Strong>/</Strong> StyledComponents <Strong>/</Strong> React-reveal </Pils>
             </div>
-        </div>
+        </DescContainer>
   
-        <div data-aos="fade-left" className="col-10 col-md-8 col-lg-5">
+        <ImgContainer className="col-10 col-md-8 col-lg-5">
             <Link>  
             <Img style={{ border: "black"}} src={TeslaImg}/>
             <LinkHover>
@@ -303,13 +305,13 @@ const Proyects = () => {
               </Icons>
             </LinkHover>
             </Link>
-      </div>
+      </ImgContainer>
   
         </Subcontainer>    
 
         <Subcontainer className="row py-5 d-flex justify-content-center align-items-center">
 
-        <div data-aos="fade-right" className="col-10 col-md-8 col-lg-5 px-5 text-center mb-2">
+        <DescContainer className="col-10 col-md-8 col-lg-5 px-5 text-center mb-2">
         <ProyectTitle>Drum Machine</ProyectTitle>
         <Description>
         <ProyectDesc> FreeCodeCamp Proyect</ProyectDesc>
@@ -317,9 +319,9 @@ const Proyects = () => {
         <div className="my-2 d-flex justify-content-center align-items-center">
         <Pils>JavaScript <Strong>/</Strong> React </Pils>
         </div>
-        </div>
+        </DescContainer>
 
-        <div data-aos="fade-left" className="col-10 col-md-8 col-lg-5">
+        <ImgContainer className="col-10 col-md-8 col-lg-5">
       <Link>  
       <Img src={drumMachineImg}/>
       <LinkHover>
@@ -331,7 +333,7 @@ const Proyects = () => {
         </Icons>
       </LinkHover>
       </Link>
-      </div>
+      </ImgContainer>
 
       </Subcontainer>
 

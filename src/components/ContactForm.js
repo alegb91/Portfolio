@@ -1,9 +1,8 @@
 import { Mail, LocationOn, Phone, GitHub, LinkedIn } from '@mui/icons-material';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
-import AOS from "aos";
-import "aos/dist/aos.css";
-import emailjs from "emailjs-com"
+import emailjs from "emailjs-com";
+import 'animate.css';
 
 const Container = styled.div` 
 position: relative;  
@@ -66,6 +65,11 @@ const InfoContainer = styled.div`
     margin: 20px;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    animation: fadeInRight;
+    animation-duration: 0.5s; 
+    animation-fill-mode: forwards;
+    animation-delay: ${props => props.delay};
 
     @media(max-width: 500px) {
         justify-content: start;
@@ -194,39 +198,29 @@ const ContactForm = () => {
           e.target.reset()
     }
 
-    useEffect(() => {
-        AOS.init({
-          offset: 0,
-          duration: 1000,
-          easing: 'ease-out-sine',
-          delay: 0,
-        })
-      })
-      window.addEventListener('load', AOS.refresh)
-
   return (
     <Container id="contactMe">
         <SubContainer>
         <Title>Contact Me</Title>
-            <InfoContainer data-aos="fade-left">
+            <InfoContainer delay='0'>
                     <Icon>
                         <Phone />
                     </Icon>
                     <Span>+543815622754</Span>
                 </InfoContainer>
-                <InfoContainer data-aos-anchor-placement="top-bottom" data-aos="fade-left">
+                <InfoContainer delay='0.1s'>
                     <Icon>
                         <Mail />
                     </Icon>
                     <Span>alegb91@gmail.com</Span>
                 </InfoContainer>
-                <InfoContainer data-aos-anchor-placement="top-bottom" data-aos="fade-left">
+                <InfoContainer delay='0.2s'>
                     <Icon>
                         <LocationOn />
                     </Icon>
                     <Span>Tucuman, Argentina</Span>
                 </InfoContainer>
-                <InfoContainer data-aos-anchor-placement="top-bottom" data-aos="fade-left">
+                <InfoContainer delay='0.3s'>
                     <ContactIcon target="_blank" href="https://github.com/alegb91">
                         <GitHub />
                     </ContactIcon>
@@ -252,8 +246,8 @@ const ContactForm = () => {
                     <TextArea type="text" name="message"/> 
                 </InputContainer>
                 <Button type="submit">Send</Button>
-                {formStatus === "Enviado" ? <Send data-aos="fade">Message send</Send> : null}
-                {formStatus === "Error" ? <Error data-aos="fade">Error</Error> : null}
+                {formStatus === "Enviado" ? <Send>Message send</Send> : null}
+                {formStatus === "Error" ? <Error>Error</Error> : null}
                </form>
             </SubContainer>
     </Container>

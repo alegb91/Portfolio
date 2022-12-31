@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import React, { useEffect } from 'react';
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from 'react';
 import {
   faCss3, 
   faGitAlt, 
@@ -13,6 +11,7 @@ import {
   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
   import mongodb from "../images/Toolbox-icons/mongodb.png";
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
+import 'animate.css';
 
 const Container = styled.div`
     min-height: 85vh;
@@ -36,6 +35,10 @@ const Title = styled.h1`
 color: white;
 font-size: 80px;
 font-weight: bold;
+opacity: 0;
+    animation: fadeInLeft; 
+    animation-duration: 0.5s; 
+    animation-fill-mode: forwards;
 
 @media (max-width: 800px) {
   font-size: 70px;
@@ -113,21 +116,11 @@ align-text: center;
 
 const AboutMe = () => {
 
-  useEffect(() => {
-    AOS.init({
-      offset: 200,
-      duration: 1000,
-      easing: 'ease-out-sine',
-      delay: 100,
-    })
-    window.addEventListener('load', AOS.refresh)
-  },)
-
 
   return (
       <Container className="container" id="aboutMe">
           <DescriptionContainer className="row">
-              <Title data-aos="fade-right" data-aos-anchor-placement="top-center">ABOUT ME</Title>
+              <Title>ABOUT ME</Title>
               <Description>Im from <Strong>Argentina</Strong>, but i want to relocate eventually.</Description>
               <Description>I've a degree in <Strong>business administration and accounting</Strong> and i've been <Strong>working in the field since 2017.</Strong></Description>
               <Description>I started learning Development at the end of 2021, and i enjoyed it a lot! So im looking to switch my career path.</Description>

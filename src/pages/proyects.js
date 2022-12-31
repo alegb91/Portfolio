@@ -6,6 +6,7 @@ import {
 import { motion } from "framer-motion";
 
 const ProyectsPage = () => {
+
   return (
     <motion.div
       initial={{ width: 0 }}
