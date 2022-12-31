@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.20855598.css",
-    "main.js": "/Portfolio/static/js/main.bd36c20a.js",
+    "main.css": "/Portfolio/static/css/main.0daca25c.css",
+    "main.js": "/Portfolio/static/js/main.a7e8c8fd.js",
     "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/Tesla.png": "/Portfolio/static/media/Tesla.b8c1f9532e9eac25e272.png",
     "static/media/AxeGym.png": "/Portfolio/static/media/AxeGym.7ed83db7fd4eaec2c3a8.png",
     "static/media/DrumMachine.png": "/Portfolio/static/media/DrumMachine.146636ba28217aa7d3c6.png",
     "static/media/Countries.png": "/Portfolio/static/media/Countries.95f19ee039ed7d280bca.png",
     "static/media/TaskManager.png": "/Portfolio/static/media/TaskManager.31fe6cd9ce48e1965841.png",
-    "static/media/AlejandroGonzalezBuffoEnglish.pdf": "/Portfolio/static/media/AlejandroGonzalezBuffoEnglish.b9b769c79bae2d5e8b06.pdf",
+    "static/media/AlejandroGonzalezBuffoEnglish.pdf": "/Portfolio/static/media/AlejandroGonzalezBuffoEnglish.7631c61420b7534e7117.pdf",
     "index.html": "/Portfolio/index.html",
-    "main.20855598.css.map": "/Portfolio/static/css/main.20855598.css.map",
-    "main.bd36c20a.js.map": "/Portfolio/static/js/main.bd36c20a.js.map",
+    "main.0daca25c.css.map": "/Portfolio/static/css/main.0daca25c.css.map",
+    "main.a7e8c8fd.js.map": "/Portfolio/static/js/main.a7e8c8fd.js.map",
     "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.20855598.css",
-    "static/js/main.bd36c20a.js"
+    "static/css/main.0daca25c.css",
+    "static/js/main.a7e8c8fd.js"
   ]
 }
